@@ -1,0 +1,13 @@
+{
+  "name": "picassojs-examples",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@nebula.js/sn-scatter-plot": "latest",
+    "@nebula.js/sn-combo-chart": "latest",
+    "@nebula.js/sn-bar-chart": "latest",
+    "@nebula.js/sn-line-chart": "latest",
+    "@nebula.js/stardust": "latest",
+    "enigma.js": "^2.7.3"
+  }
+}
