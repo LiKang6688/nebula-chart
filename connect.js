@@ -14,7 +14,7 @@ export default function connect() {
           url: `ws://localhost:9076/app/${Date.now()}`
         })
         .open()
-        .then(qix => qix.openDoc('/apps/Cars - Nov 18.qvf'))
+        .then(qix => qix.openDoc('/apps/Ctrl-00.qvf'))
     );
 
   return createConnection();
