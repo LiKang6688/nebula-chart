@@ -4,7 +4,7 @@ import comboChart from "@nebula.js/sn-combo-chart";
 import barChart from "@nebula.js/sn-bar-chart";
 import lineChart from "@nebula.js/sn-line-chart";
 import connect from "./connect";
-import "./style";
+import "./style.css";
 
 function init() {
   connect().then((app) => {
