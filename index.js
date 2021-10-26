@@ -3,6 +3,7 @@ import scatterPlot from "@nebula.js/sn-scatter-plot";
 import comboChart from "@nebula.js/sn-combo-chart";
 import barChart from "@nebula.js/sn-bar-chart";
 import lineChart from "@nebula.js/sn-line-chart";
+import table from "@nebula.js/sn-table";
 import connect from "./connect";
 import "./style.css";
 
@@ -27,6 +28,10 @@ function init() {
           name: "line",
           load: () => Promise.resolve(lineChart),
         },
+        {
+          name: "table",
+          load: () => Promise.resolve(table),
+        },
       ],
     });
 
@@ -37,17 +42,16 @@ function init() {
     // nebbie.field('Alpha').then(s => s.mount(document.getElementById('object')));
 
     // create a session object
-    nebbie
-      .render({
-        element: document.getElementById("object"),
-        type: "bar",
-        fields: ["Alpha", "=Sum(Expression1)", "=Sum(Expression2)"],
-      })
-      .then((viz) => {
-        setTimeout(function () {
-          viz.convertTo("line");
-        }, 3000);
-      });
+    nebbie.render({
+      element: document.getElementById("object"),
+      type: "table",
+      fields: ["Alpha", "=Sum(Expression1)", "=Sum(Expression2)"],
+    });
+    // .then((viz) => {
+    //   setTimeout(function () {
+    //     viz.convertTo("line");
+    //   }, 3000);
+    // });
   });
 }
 
